@@ -1,2 +1,64 @@
+/**
+ * Ponto
+ * Classe que representa um ponto no plano cartesiano.
+ */
+
 public class Ponto {
+    private double coordX;
+    private double coordY;
+
+    /**
+     * Construtor padrão
+     */
+    public Ponto() {
+        this.coordX = 0.0;
+        this.coordY = 0.0;
+    }
+
+    /**
+     * Construtor parametrizado (recebe coordenadas x e y)
+     * @param coordX
+     * @param coordY
+     */
+    public Ponto(double coordX,
+                 double coordY) {
+        this.coordX = coordX;
+        this.coordY = coordY;
+    }
+
+    /**
+     * Construtor parametrizado (recebe um ponto)
+     * @param origem
+     */
+    public Ponto(Ponto origem) {
+        this.coordX = origem.coordX;
+        this.coordY = origem.coordY;
+    }
+
+    // Getters and Setters (métodos acessores)
+    public double getCoordX() {
+        return coordX;
+    }
+
+    public double getCoordY() {
+        return coordY;
+    }
+
+    public void setCoordX(double coordX) {
+        this.coordX = coordX;
+    }
+
+    public void setCoordY(double coordY) {
+        this.coordY = coordY;
+    }
+
+    @Override
+    public String toString() {
+        return "Ponto{" +
+                "coordX= " + coordX +
+                ", coordY= " + coordY +
+                '}';
+
+//        return "Ponto(" + coordX + ", " + coordY + ")";
+    }
 }
