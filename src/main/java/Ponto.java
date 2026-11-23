@@ -35,7 +35,32 @@ public class Ponto {
         this.coordY = origem.coordY;
     }
 
-    // Getters and Setters (métodos acessores)
+    /**
+     * Calculo da distância entre dois pontos
+     * @param destino
+     * @return
+     */
+    public double calcularDistancia(Ponto destino) {
+        double deltaX = Math.pow((destino.coordX - this.coordX), 2);
+        double deltaY = Math.pow((destino.coordY - this.coordY), 2);
+        double distancia = Math.sqrt(deltaX + deltaY);
+
+        return distancia;
+    }
+
+    /**
+     * Calculo da distância entre esse ponto e outra coordenada;
+     * @return
+     */
+
+    /**
+     * Deslocamento do ponto atual, para novas corredenadas (delta x e delta y)
+     * Deve alterar a coordenada atual, com base nos deltas.
+     * @return
+     */
+
+
+    // region: Getters and Setters (métodos acessores)
     public double getCoordX() {
         return coordX;
     }
@@ -51,6 +76,8 @@ public class Ponto {
     public void setCoordY(double coordY) {
         this.coordY = coordY;
     }
+
+    //endregion
 
     @Override
     public String toString() {
